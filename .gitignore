@@ -14,4 +14,4 @@ dist
 # Data files
 /cities/data/*
 
-./*
+.history
