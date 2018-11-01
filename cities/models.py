@@ -134,6 +134,10 @@ class BaseCountry(Place, SlugModel):
                                   null=True,
                                   related_name='countries',
                                   on_delete=SET_NULL_OR_CASCADE)
+    site = models.ForeignKey(swapper.get_model_name('sites', 'Site'),
+                                  null=True,
+                                  related_name='countries',
+                                  on_delete=SET_NULL_OR_CASCADE)
     tld = models.CharField(max_length=5, verbose_name='TLD')
     postal_code_format = models.CharField(max_length=127)
     postal_code_regex = models.CharField(max_length=255)
