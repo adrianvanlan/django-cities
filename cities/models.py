@@ -8,7 +8,7 @@ except (NameError, ImportError):
 
 from django.db import transaction
 from django.utils.encoding import python_2_unicode_compatible
-from django.contrib.gis.db.models import PointField
+from django.contrib.gis.db.models import PointField, MultiPolygonField
 from django.db import models
 from django.contrib.gis.geos import Point
 
